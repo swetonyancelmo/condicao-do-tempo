@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #222845;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  font-weight: 700;
+  color: #8F5CFF;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 600px;
+  height: 60px;
+  margin: 2rem auto;
+}
+
+input {
+  width: 100%;
+  margin-right: 10px;
+  padding-left: 16px;
+  background: #181C2A;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
+  height: 60px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0px 12px 12px 0px;
+  cursor: pointer;
+  background: #AA72FF;
+  color: #222845;
+  transition: all .2s ease;
+}
+
+button:hover {
+  background: #b17dff;
+}
+
+.condicao-contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+  height: 140px;
+  background-color: #181C2A;
+  margin-top: 3rem;
+  border-radius: 14px;
+}
+
+.city-contain {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-left: 18px;
+}
+
+.city-contain span:first-child {
+  font-weight: 300;
+}
+
+.city-contain span:last-child {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px){
+  form {
+    width: 100%;
+  }
+
+  .condicao-contain {
+    width: 100%;
+  }
+}
