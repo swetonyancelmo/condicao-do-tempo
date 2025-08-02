@@ -1,12 +1,59 @@
-# React + Vite
+# Condições do Tempo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto React desenvolvido com Vite para consultar e exibir as condições climáticas de uma localização informada pelo usuário.
 
-Currently, two official plugins are available:
+![Imagem do projeto](./src/assets/condicoes.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Visão Geral
 
-## Expanding the ESLint configuration
+- **Framework:** [React](https://reactjs.org/)
+- **Ferramenta de Build:** [Vite](https://vitejs.dev/)
+- **Estilização:** CSS personalizado
+- **API de Dados:** Integração com a [OpenWeather API](https://openweathermap.org/)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+- Busca as condições climáticas baseado na entrada do usuário.
+- Exibe a temperatura e a localização retornada pela API.
+- Mostra um ícone representativo do clima.
+- Apresenta mensagens de erro para localizações inválidas ou problemas na requisição.
+
+## Estrutura do Projeto
+
+- `public/`  
+  Contém arquivos estáticos, como o ícone do Vite.
+
+- `src/`
+  - `App.jsx`  
+    Componente principal que renderiza o componente [Condicao](src/components/Condicao/Condicao.jsx).
+  - `components/Condicao/Condicao.jsx`  
+    Componente que realiza a chamada à API do OpenWeather e exibe os dados do clima.
+  - `assets/`  
+    Contém imagens e outros recursos (ex: `clima.png`).
+
+- Arquivos de configuração:
+  - [vite.config.js](vite.config.js)
+  - [eslint.config.js](eslint.config.js)
+  - [package.json](package.json)
+
+## Como Usar
+
+1. **Instalação das dependências**:
+   ```sh
+   npm install
+   ```
+2. **Rodar o servidor de desenvolvimento**:
+  ```sh
+  npm run dev
+  ```
+O projeto ficará disponível em http://localhost:3000 (a porta pode variar conforme configuração).
+
+## Configurações da API
+
+No componente Condicao.jsx a API do OpenWeather é chamada utilizando uma API key definida diretamente na URL da requisição. Verifique se a API key (appid) está correta para assegurar o funcionamento adequado.
+
+## Licença
+
+Projeto desenvolvido para fins educativos e demonstrativos.
+
+Projeto realizado por [Swetony Ancelmo](https://github.com/swetonyancelmo)
